@@ -90,25 +90,6 @@
     img.classList.add('swap'); setTimeout(go, 380);
   };
 
-  // Meet Marcus: roles swap the large portrait and the text (source wording).
-  // One name per role, used on the thumbnail, the large caption and the text block alike.
-  const roles = [
-    { name: 'Style coach', img: ['assets/img/cream-bw-1600.webp', 1440, 1440, 'Marcus Ervin in a cream jacket in front of a shop window'], text: 'I have read many books and taken hours upon hours of instructional classes to build up a wealth of knowledge to assist you. My aim is to pass you the ball and facilitate your success.' },
-    { name: 'Trainer', img: ['assets/img/yellow-wall-1600.webp', 1002, 1394, 'Marcus in a yellow turtleneck against a graffiti wall'], text: "Let's head to a local gym, where we will do a workout together, tailored to your fitness level and goals. I'll share what has helped me grow muscle, stay in shape and eat properly." },
-    { name: 'Barber', img: ['assets/img/sky-wall-1600.webp', 1200, 1600, 'Marcus in an all-black outfit against a sky-blue wall'], text: 'Using my decades-long experience as a skilled barber, together we will figure out the cut and style that works perfectly for your head shape, hair type, goals, and lifestyle.' },
-    { name: 'Speaker', img: ['assets/img/black-suit-1600.webp', 1600, 1162, 'Marcus in a black suit and green tie fastening his jacket'], pos: '40% 30%', text: "As an experienced public speaker and business professional, I'll guide you in preparing your speech and delivering it in a way that displays poise & confidence." }
-  ];
-  const thumbs = [...document.querySelectorAll('[data-role-i]')];
-  const big = document.querySelector('[data-role="img"]');
-  thumbs.forEach((t) => t.addEventListener('click', () => {
-    const r = roles[+t.dataset.roleI];
-    thumbs.forEach((x) => x.setAttribute('aria-pressed', String(x === t)));
-    document.querySelector('[data-role="name"]').textContent = r.name;
-    document.querySelector('[data-role="text"]').textContent = r.text;
-    document.querySelector('[data-role="cap"]').textContent = r.name;
-    swapImg(big, ...r.img, r.pos);
-  }));
-
   // Touch screens have no hover: bloom duotone photos while they sit mid-screen
   if (!matchMedia('(hover:hover)').matches && 'IntersectionObserver' in window) {
     const io = new IntersectionObserver((es) => es.forEach((e) => e.target.classList.toggle('in-view', e.isIntersecting)), { rootMargin: '-35% 0px -35% 0px' });

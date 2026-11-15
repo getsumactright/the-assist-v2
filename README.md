@@ -2,7 +2,9 @@
 
 The live site for The Assist, Marcus Ervin's personal styling service, built from design demo 10 (The Upgrade). It is a single static page with no build step: `index.html`, plus `privacy.html` and `404.html`, with everything else under `assets/`.
 
-Hosted on GitHub Pages from `main` (repo root). Preview URL: https://getsumactright.github.io/the-assist/
+This is version 2 of the layout: the playbook (Style coach, Trainer, Barber, Speaker) as the first screen beside a mini hero, then the plays as static cards. The current live site stays in its own repo, getsumactright/the-assist.
+
+Hosted on GitHub Pages from `main` (repo root). Preview URL: https://getsumactright.github.io/the-assist-v2/
 
 ## Before launch
 
@@ -10,8 +12,8 @@ Hosted on GitHub Pages from `main` (repo root). Preview URL: https://getsumactri
 2. **Point his domain here.** When Marcus moves themarcuservin.com off Wix:
    - Add a `CNAME` file containing `themarcuservin.com` and set the custom domain in the repo's Pages settings.
    - Set the DNS records GitHub lists for an apex domain at his registrar.
-   - Replace `https://getsumactright.github.io/the-assist/` with `https://themarcuservin.com/` in `index.html` (canonical, Open Graph, JSON-LD), `privacy.html`, `robots.txt` and `sitemap.xml`.
-   - In `404.html`, change `/the-assist/` to `/`.
+   - Replace `https://getsumactright.github.io/the-assist-v2/` with `https://themarcuservin.com/` in `index.html` (canonical, Open Graph, JSON-LD), `privacy.html`, `robots.txt` and `sitemap.xml`.
+   - In `404.html`, change `/the-assist-v2/` to `/`.
 3. **Have Marcus review the wording.** The hero line, "Find your play", the lookbook captions and the privacy policy were written for this site. Everything else comes from his current site.
 
 ## Assets
